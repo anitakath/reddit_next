@@ -1,0 +1,146 @@
+
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:10vh;
+    position: relative;
+}
+
+.title{
+    margin: 30px;
+    background: transparent;
+    border: none;
+}
+
+.icon{
+    color: #F7567C;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.user{
+     color: #F7567C;
+     cursor: pointer;
+     width: 20px;
+     height: 20px;
+}
+
+
+.search_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.searchInput{
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid black;
+    transition: 0.2s ease;
+}
+
+.search_btn{
+    position: absolute;
+    right: -29px;
+    transition: 0.4s ease;
+    margin: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.searchInput:hover, .searchInput:focus{
+    border-bottom: 2px solid #F7567C;
+    outline: none;
+}
+
+
+.login_container{
+    display: flex;
+    align-items: center;
+}
+
+.loginWrapper{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.menu_btn{
+    cursor: pointer;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    padding: 10px;
+      margin: 30px;
+    background: transparent;
+    border: none;
+}
+
+.menu_btn:hover, .search_btn:hover{
+    transition: 0.4s ease;
+    background: #F7567C;
+    color: white;
+}
+
+
+.menu_backdrop{
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background: rgba(255,255,255, 0.5);
+}
+.menu_container{
+    position: fixed;
+    transition: 0.8s ease;
+    background: white;
+    box-shadow: 1px 1px 5px grey;
+    height: 98vh;
+    width: 400px;
+    top: 0;
+    left:0px;
+    padding: 10px;
+}
+
+.loggedIn_wrapper{
+    position: relative;
+}
+
+.loggedInMenu_btn{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.loggedInMenu{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    top: 40px;
+    right: 0px;
+    padding: 10px;
+    width: 400px;
+    background: rgba(93,87,107);
+    z-index: 100;
+    height: 87vh;
+}
+
+.login, .register{
+    transition: 0.4s ease;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}

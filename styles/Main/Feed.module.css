@@ -1,0 +1,213 @@
+
+/* ----------------------- FEED -------------------------*/
+.container{
+    
+    position: relative;
+}
+
+
+
+/* ----------------------- NEW POST -------------------------*/
+
+.createPost_container{
+    margin: 20px;
+    height: 70px;
+   
+}
+
+
+.createPost_container{
+    display: flex;
+}
+
+.userImage_container{
+    width: 10%;
+    margin: 3px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    height:  55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle:hover{
+    cursor: pointer;
+    transition: 0.4s ease;
+    background: #F7567C;
+}
+
+.icon{
+    height: 60%;
+}
+
+
+
+.form_container{
+    width: 90%;
+    margin: 3px;
+    display: flex;
+    justify-content: centern;
+    align-items: center;
+}
+
+.createPost_form{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.textarea_input{
+    width: 60%;
+    border-radius: 3px;
+    background-color: rgba(255,255,255, 0.3);
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    padding: 4px;
+    border-bottom: 2px solid white;
+}
+
+.textarea_input:hover{
+    transition: 0.4s ease;
+}
+
+.textarea_input:focus{
+    outline: none;
+}
+
+.photo_btn, .link_btn, .enlarge_btn{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.photo_btn:hover, .link_btn:hover, .enlarge_btn:hover{
+    transition: 0.4s ease;
+    background-color: rgba(255,255,255, 0.3);
+    height: 30px;
+}
+
+
+
+
+.createPost_btn{
+    padding: 4px;
+    border: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-color: black;
+    color: rgba(255,255,255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.createPost_btn:hover{
+    transition: 0.4s ease;
+    background: #F7567C;
+}
+
+
+
+
+/* ----------------------- POSTS -------------------------*/
+
+.post_container{
+   display: flex;
+   margin: 20px;
+   border-bottom: 1px solid grey;
+   border-top: 1px solid grey;
+}
+
+.post_container:hover{
+   background-color: rgba(255,255,255, 0.2)
+   
+}
+
+
+.postRating_container{
+    width: 10%;
+}
+
+
+.postRating{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 8px;
+}
+
+.postArrowUp, .postArrowDown{
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.5);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.postArrowUp:hover, .postArrowDown:hover{
+      color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+.amountOfRatings{
+    font-size: 1.5rem;
+    margin: 5px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+.postField {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+.postInfo, .postItself, .postInteraction{
+  overflow-wrap: break-word;
+  padding: 5px;
+}
+
+.postItself p{
+    background-color: rgba(255,255,255, 0.3);
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    padding: 10px;
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 25px;
+}
+
+.postInfo, .postInteraction{
+    color: rgba(0,0,0, 0.6);
+    padding: 10px;
+    
+}
+
+.postInteraction{
+    
+}

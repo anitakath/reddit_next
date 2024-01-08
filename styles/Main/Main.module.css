@@ -1,0 +1,43 @@
+
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.webUser_container{
+    width: 20vw;
+    margin: 20px 0px;
+    position: relative;
+}
+
+.webUser_fixed{
+    border-radius: 5px;
+    width: 20vw;
+    height: 400px;
+    position: fixed;
+    background: rgba(93,87,107, 0.5);
+    
+}
+
+.output_field{
+    border-radius: 5px;
+    background: rgba(93,87,107, 0.5);
+    width: 50vw;
+    min-height: 500vh;
+    margin: 20px;
+    transition: 0.4s ease;
+}
+
+@media screen and (max-width: 1200px){
+    .output_field{
+        width: 80vw;
+    }
+
+    .webUser_container{
+        transition: 0.4s ease;
+        display: none;
+    }
+}
