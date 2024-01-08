@@ -30,12 +30,11 @@ const Header = () => {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const currentFilter = useSelector((state) => state.filter);
 
-  console.log(isLoggedIn);
-  console.log(currentFilter);
+  
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-  console.log(menuIsOpen);
+
 
   const menuHandler = (e) => {
     if (menuIsOpen === true) {

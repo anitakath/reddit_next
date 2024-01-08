@@ -12,14 +12,14 @@ const Filter = () => {
 
   const currentFilter = useSelector((state) => state.filter);
 
-  console.log(currentFilter);
+
 
   const [bestIsActive, setBestIsActive] = useState(false);
   const [hotIsActive, setHotIsActive] = useState(false);
   const [newIsActive, setNewIsActive] = useState(false);
   const [topIsActive, setTopIsActive] = useState(false);
 
-  console.log(bestIsActive);
+
 
   const filterHandler = (title) => {
     if (title === "beste") {

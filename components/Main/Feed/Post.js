@@ -4,7 +4,9 @@ import styles from '../../../styles/Main/Feed.module.css'
 //COMPONENTS
 import PostRating from "./PostRating";
 
-const Post = () => {
+const Post = (props) => {
+
+  
   return (
     <div className={styles.post_container}>
       <div className={styles.postRating_container}>

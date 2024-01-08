@@ -8,13 +8,30 @@ import { faImage } from "@fortawesome/free-regular-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faUpRightAndDownLeftFromCenter } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faQuestion } from "@fortawesome/free-solid-svg-icons";
+
+
+//REDUX
+import { useSelector } from 'react-redux';
+
 
 const CreatePost = () => {
+
+
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn)
+
+
+
+
   return (
     <div className={styles.createPost_container}>
       <div className={styles.userImage_container}>
         <div className={styles.circle}>
-          <FontAwesomeIcon icon={faUser} className={styles.icon} />
+          {isLoggedIn ? (
+            <FontAwesomeIcon icon={faUser} className={styles.icon} />
+          ) : (
+            <FontAwesomeIcon icon={faQuestion} className={styles.icon} />
+          )}
         </div>
       </div>
 

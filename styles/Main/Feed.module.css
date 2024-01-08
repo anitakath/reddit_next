@@ -129,6 +129,14 @@
 
 /* ----------------------- POSTS -------------------------*/
 
+.loadingPostsParagraph{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: rgba(255,255,255, 0.7);
+    padding: 10px 0px;
+}
+
 .post_container{
    display: flex;
    margin: 20px;
