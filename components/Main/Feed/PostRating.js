@@ -10,9 +10,43 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { increment, decrement } from "@/store/counterSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-const PostRating = () => {
+//API
+//import { updatePostVotes } from '../api/rate-post'; // Annahme, dass Sie die API-Funktion zum Aktualisieren der Datenbank haben
+import { updatePostVotes } from "../../../pages/api/rate-post";
+
+
+
+
+const PostRating = (props) => {
+
   const dispatch = useDispatch();
   const currCount = useSelector((state) => state.counter);
+
+  const votes = props.votes
+  const postId = props.postId
+
+  console.log(votes)
+  console.log(postId)
+
+
+
+
+
+
+
+  const handleIncrement = async () => {
+
+
+   // dispatch(increment());
+    await updatePostVotes({ postId: props.postId, type: "upvotes" }); // Annahme, dass postId als Parameter übergeben wird
+  };
+
+  const handleDecrement = async () => {
+    //dispatch(decrement());
+    await updatePostVotes({ postId: props.postId, type: "downvotes" }); // Annahme, dass postId als Parameter übergeben wird
+  };
+
+
 
   return (
     <div className={styles.postRating}>
@@ -20,15 +54,15 @@ const PostRating = () => {
         <FontAwesomeIcon
           icon={faArrowUp}
           className={styles.postArrowUp}
-          onClick={() => dispatch(increment())}
+          onClick={handleIncrement}
         />
       </div>
-      <p className={styles.amountOfRatings}> {currCount} </p>
+      <p className={styles.amountOfRatings}> {votes} </p>
       <div>
         <FontAwesomeIcon
           icon={faArrowDown}
           className={styles.postArrowDown}
-          onClick={() => dispatch(decrement())}
+          onClick={handleDecrement}
         />
       </div>
     </div>

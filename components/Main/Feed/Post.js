@@ -3,26 +3,41 @@ import styles from '../../../styles/Main/Feed.module.css'
 
 //COMPONENTS
 import PostRating from "./PostRating";
+import PostInteraction from './PostInteraction';
 
 const Post = (props) => {
 
+  console.log(props)
+
+  const {id, author, title, description, upvotes, downvotes} = props
+  console.log(author)
+
+  console.log(upvotes)
+  console.log(downvotes)
+
+  let totalvote = upvotes - downvotes
+
+  console.log(totalvote)
+
+  
   
   return (
     <div className={styles.post_container}>
       <div className={styles.postRating_container}>
-        <PostRating />
+        <PostRating votes={totalvote} postId={id} />
       </div>
 
       <div className={styles.postField}>
-        <div className={styles.postInfo}> post info</div>
+        <div className={styles.postInfo}> created by: {author} </div>
         <div className={styles.postItself}>
+          <h1>{title}</h1>
           <p>
-            Hallo du süße Maus, ich mag dich, ich liebe dich, du bist toll. Hab
-            ganz viel Spaß, bei was auch immer du gerade machst. und mach es mit
-            Leidenschaft.
+            {description}
           </p>
         </div>
-        <div className={styles.postInteraction}> post interaction</div>
+        <div className={styles.postInteraction}> 
+        <PostInteraction/> 
+        </div>
       </div>
     </div>
   );

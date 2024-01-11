@@ -28,6 +28,7 @@ const Feed = (props) => {
      
    
   }, [props.posts]) 
+  console.log(posts)
 
 
 
