@@ -49,8 +49,8 @@
 }
 
 .createPost_input{
-   border: none;
-   cursor: pointer;
+    border: none;
+    cursor: pointer;
     background: rgba(255,255,255, 0.5);
     width: 100%;
     margin: 10px;
@@ -62,8 +62,16 @@
     outline: none;
 }
 
-.createPost_inputTextarea{
-    
+.createPost_textarea{
+    width: 100%;
+    cursor: pointer;
+    background: rgba(255,255,255, 0.5);
+    padding: 4px;
+    margin: 10px;
+}
+
+.createPost_textarea:focus{
+    outline: none;
 }
 
 .createPost_label{
@@ -71,12 +79,24 @@
 }
 
 .createPost_button{
-    border: 2px solid black;
     margin: 10px;
     width: 100%;
-    background: rgba(0,0,0, 0.3);
+    background:#F7567C;
     color: rgba(255,255,255, 0.7);
-    padding: 5px;
+    padding: 10px 5px;
+}
+
+.createPost_button:hover{
+    transition: 0.4s ease;
+    background: rgba(255,255,255, 0.7);
+    letter-spacing: 1px;
+    color:#F7567C;
+
+}
+
+.createPost_button:active{
+    transition: 0.4s ease;
+    transform: scale(0.98);
 }
 
 

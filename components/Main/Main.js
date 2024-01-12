@@ -11,11 +11,13 @@ import styles from '../../styles/Main/Main.module.css'
 //REDUX
 import { useSelector } from 'react-redux'
 
+
 const Main = (props) => {
   const [posts, setPosts] = useState([]);
 
   const currentFilter = useSelector((state) => state.filter);
 
+  console.log(currentFilter)
 
 
 

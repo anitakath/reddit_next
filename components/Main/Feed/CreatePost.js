@@ -40,7 +40,7 @@ const CreatePost = () => {
       <div className={styles.form_container}>
         <form className={styles.createPost_form}>
           <div>
-            <Link href={`/new-post`}>
+            <Link href={`/new-post`} className={styles.createPost_link}>
                create a new post
             </Link>
           </div>

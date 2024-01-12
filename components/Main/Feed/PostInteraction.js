@@ -1,7 +1,7 @@
 
 //FONT AWESOME
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShare} from "@fortawesome/free-solid-svg-icons";
+import { faShare, faTrash} from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,6 +10,12 @@ import { faComment } from "@fortawesome/free-solid-svg-icons";
 import styles from '../../../styles/Main/Feed.module.css'
 
 const postInteraction = () =>{
+
+
+  const deletePostHandler = (e) =>{
+    e.preventDefault();
+    console.log('delete post')
+  }
 
     return (
       <div className={styles.postInteraction_container}>
@@ -41,8 +47,17 @@ const postInteraction = () =>{
             />
             <p> comment </p>
           </button>
-          
-         
+        </div>
+
+        <div className={styles.postInteraction_div}>
+          <button className={styles.comment_btn}>
+            <FontAwesomeIcon
+              icon={faTrash}
+              className={styles.postInteraction_icon}
+              onClick={deletePostHandler}
+            />
+            <p> delete </p>
+          </button>
         </div>
       </div>
     );
