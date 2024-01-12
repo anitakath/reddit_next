@@ -9,16 +9,32 @@ import Filter from './Filter'
 //STYLES
 import styles from '../../../styles/Main/Feed.module.css'
 
+//REDUX 
+import { useSelector } from "react-redux";
+import { current } from "@reduxjs/toolkit";
+
 const Feed = (props) => {
 
-   const loadedPosts = props.posts;
 
-  const [loadingPosts, setLoadingPosts] = useState(true)
+  const currentFilter = useSelector((state) => state.filter);
+
+
+  const loadedPosts = props.posts;
+
+  const [loadingPosts, setLoadingPosts] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   const [posts, setPosts] = useState([])
+  const [ deine, setDeine ] = useState(false)
   
 
   useEffect(()=>{
+
+    if(currentFilter === 'deine'){
+      setDeine(true)
+      setLoadingPosts(true)
+    } else if (currentFilter != 'deine'){
+      setDeine(false)
+    }
 
       if (loadedPosts) {
         setIsLoaded(true);
@@ -27,7 +43,8 @@ const Feed = (props) => {
       }
      
    
-  }, [props.posts]) 
+  }, [props.posts, currentFilter]) 
+
   console.log(posts)
 
 
@@ -37,7 +54,7 @@ const Feed = (props) => {
       <Filter />
       <CreatePost />
       {loadingPosts && <p className={styles.loadingPostsParagraph}> loading posts ...</p>}
-      {isLoaded && posts.map((post, id) => <Post {...post} key={id} />)}
+      {isLoaded && deine &&  posts.map((post, id) => <Post {...post} key={id} />)}
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 //STYLES
 import styles from '../../../styles/Main/Feed.module.css'
 
@@ -37,7 +39,11 @@ const CreatePost = () => {
 
       <div className={styles.form_container}>
         <form className={styles.createPost_form}>
-          <input type="textarea" className={styles.textarea_input}></input>
+          <div>
+            <Link href={`/new-post`}>
+               create a new post
+            </Link>
+          </div>
           <button className={styles.photo_btn}>
             <FontAwesomeIcon icon={faImage} className={styles.icon} />
           </button>

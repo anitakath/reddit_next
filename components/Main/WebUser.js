@@ -34,7 +34,7 @@ const WebUser = () => {
       </div>
       <div className={styles.btn_container}>
         <button> beitrag erstellen </button>
-        <button> communitsy erstellen </button>
+        <button> community erstellen </button>
       </div>
     </div>
   );

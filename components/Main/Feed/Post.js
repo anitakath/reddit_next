@@ -7,17 +7,11 @@ import PostInteraction from './PostInteraction';
 
 const Post = (props) => {
 
-  console.log(props)
 
-  const {id, author, title, description, upvotes, downvotes} = props
-  console.log(author)
 
-  console.log(upvotes)
-  console.log(downvotes)
-
+  const {id, created_at, author, title, description, upvotes, downvotes} = props
+  
   let totalvote = upvotes - downvotes
-
-  console.log(totalvote)
 
   
   
@@ -28,15 +22,16 @@ const Post = (props) => {
       </div>
 
       <div className={styles.postField}>
-        <div className={styles.postInfo}> created by: {author} </div>
+        <div className={styles.postInfo}>
+          <p>created by: {author}</p> 
+          <p className={styles.postInfo_at}> at: {created_at}</p>
+        </div>
         <div className={styles.postItself}>
           <h1>{title}</h1>
-          <p>
-            {description}
-          </p>
+          <p>{description}</p>
         </div>
-        <div className={styles.postInteraction}> 
-        <PostInteraction/> 
+        <div className={styles.postInteraction}>
+          <PostInteraction />
         </div>
       </div>
     </div>

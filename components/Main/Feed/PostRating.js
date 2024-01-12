@@ -25,8 +25,6 @@ const PostRating = (props) => {
   const votes = props.votes
   const postId = props.postId
 
-  console.log(votes)
-  console.log(postId)
 
 
 

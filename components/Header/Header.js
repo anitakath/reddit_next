@@ -15,8 +15,6 @@ import LoggedInMenu from "./LoggedInMenu";
 import styles from '../../styles/Header/Header.module.css'
 
 //FONT AWESOME
-
-
 import { faRedditAlien } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";

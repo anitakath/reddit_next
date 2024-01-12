@@ -16,7 +16,6 @@ const Main = (props) => {
 
   const currentFilter = useSelector((state) => state.filter);
 
-  
 
 
 

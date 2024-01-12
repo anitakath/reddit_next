@@ -227,7 +227,14 @@
 .postInfo, .postInteraction{
     color: rgba(0,0,0, 0.6);
     padding: 10px;
-    
+    display: flex;
+    justify-content: space-between;
+}
+
+.postInfo_at{
+    font-size: 0.8rem;
+    color: rgba(255,255,255, 0.3)
+
 }
 
 

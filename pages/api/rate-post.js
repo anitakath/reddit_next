@@ -22,12 +22,8 @@ export async function updatePostVotes(req, res) {
       .from("feed_dummy")
       .select('upvotes') // wähle alle columns aus
       .eq("id", postId)
+
       //.update({upvotes: 2})
-      
-      
-      
-     
-      
       /*.update({ upvote })
       .eq("id", postId);*/
 

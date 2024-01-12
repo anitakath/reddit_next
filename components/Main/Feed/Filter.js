@@ -18,6 +18,7 @@ const Filter = () => {
   const [hotIsActive, setHotIsActive] = useState(false);
   const [newIsActive, setNewIsActive] = useState(false);
   const [topIsActive, setTopIsActive] = useState(false);
+  const [deineIsActive, setDeineIsActive] = useState(false)
 
 
 
@@ -29,6 +30,9 @@ const Filter = () => {
       setHotIsActive(false);
       setNewIsActive(false);
       setTopIsActive(false);
+      setDeineIsActive(false);
+
+      
     } else if (title === "heiß") {
       dispatch(filter("heiß"));
 
@@ -36,6 +40,7 @@ const Filter = () => {
       setHotIsActive(true);
       setNewIsActive(false);
       setTopIsActive(false);
+      setDeineIsActive(false);
     } else if (title === "neu") {
       dispatch(filter("neu"));
 
@@ -43,13 +48,23 @@ const Filter = () => {
       setHotIsActive(false);
       setNewIsActive(true);
       setTopIsActive(false);
+      setDeineIsActive(false);
     } else if (title === "top") {
       dispatch(filter("top"));
 
       setBestIsActive(false);
       setHotIsActive(false);
       setNewIsActive(false);
+      setDeineIsActive(false);
       setTopIsActive(true);
+    } else if (title === "deine") {
+      dispatch(filter("deine"));
+
+      setBestIsActive(false);
+      setHotIsActive(false);
+      setNewIsActive(false);
+      setTopIsActive(false);
+      setDeineIsActive(true)
     }
   };
 
@@ -93,7 +108,12 @@ const Filter = () => {
           </button>
         </div>
         <div>
-          <button className={styles.filter_btn}> reload </button>
+          <button
+            className={styles.filter_btn}
+            onClick={() => filterHandler("deine")}
+          >
+           deine
+          </button>
         </div>
       </div>
     </div>

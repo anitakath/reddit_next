@@ -9,16 +9,19 @@ import Main from '@/components/Main/Main';
 import {Provider} from 'react-redux'
 import store from '@/store';
 
+
 //HOOKS
 import useSWR from 'swr'
 
 import { supabase } from "@/services/supabaseClient";
+import { current } from "@reduxjs/toolkit";
 
   //fetchet hits the endpoint (api/get-posts) and retrieves its result as json. result is named data
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 
 export default function Home() {
+
 
   
 
@@ -27,6 +30,7 @@ export default function Home() {
   const {data, error} = useSWR('/api/get-post', fetcher /*, {refreshInterval: 200} */)
 
 
+  console.log(myPosts);
 
   useEffect(() => {
     if (error) {
