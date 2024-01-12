@@ -35,7 +35,6 @@ const Main = (props) => {
       <div className={styles.webUser_container}>
         <div className={styles.webUser_fixed}>
             <WebUser/>
-
         </div>
       </div>
     </div>

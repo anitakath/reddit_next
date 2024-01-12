@@ -26,8 +26,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const NewPost = () =>{
 
 
-
-
   
 
     return (
