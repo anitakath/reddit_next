@@ -4,5 +4,45 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    border: 2px solid red;
+    background: rgba(0, 0, 0, 0.2);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+
+.reddit_container, .google_container{
+    background: rgba(255,255,255, 0.9);
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    margin: 30px;
+}
+
+.icon{
+    color: #F7567C;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+
+
+.reddit_title{
+    margin: 10px;
+    height: 70px;
+    display: flex;
+    align-items: end;
+    font-size: 2rem;
+    cursor: pointer;
+ 
+}
+
+.reddit_title:hover{
+    transition: 0.4s ease;
+    color: #F7567C;
+}
+

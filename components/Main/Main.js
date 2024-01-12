@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 //COMPONENTS
 import Feed from "./Feed/Feed";
 import WebUser from "./WebUser";
+import Login from "../Login";
 
 //STYLES
 import styles from '../../styles/Main/Main.module.css'
@@ -13,7 +14,7 @@ import { useSelector } from 'react-redux'
 
 
 const Main = (props) => {
-  const [posts, setPosts] = useState([]);
+  
 
   const currentFilter = useSelector((state) => state.filter);
 
@@ -28,17 +29,24 @@ const Main = (props) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.output_field}>
-        <Feed posts={props.posts} />
-      </div>
+      {!isLoggedIn.isLoggedIn && <Login/>}
 
-      <div className={styles.webUser_container}>
-        <div className={styles.webUser_fixed}>
-            <WebUser/>
+      {isLoggedIn.isLoggedIn && (
+        <div>
+          <div className={styles.output_field}>
+            <Feed posts={props.posts} />
+          </div>
+
+          <div className={styles.webUser_container}>
+            <div className={styles.webUser_fixed}>
+              <WebUser />
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
+
 };
 
 export default Main; 
