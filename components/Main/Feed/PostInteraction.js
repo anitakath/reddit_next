@@ -1,4 +1,8 @@
 
+import { useRouter } from "next/router";
+import { useState } from "react";
+
+
 //FONT AWESOME
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare, faTrash} from "@fortawesome/free-solid-svg-icons";
@@ -6,15 +10,55 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
 
 
+//SUPABASE
+import { supabase } from "@/services/supabaseClient";
+
 //STYLES
 import styles from '../../../styles/Main/Feed.module.css'
 
-const postInteraction = () =>{
+
+//REDUX
+import { filter } from "@/store/filterSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 
-  const deletePostHandler = (e) =>{
-    e.preventDefault();
+const postInteraction = (props) =>{
+
+  const [isLoading, setIsLoading] = useState(false)
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  console.log(props.postId)
+
+  
+
+  const deletePostHandler = async (event) =>{
+    event.preventDefault();
     console.log('delete post')
+    
+    try{
+      setIsLoading(true);
+
+      const {errors} = await supabase
+      .from("feed_dummy")
+      .delete()
+      .eq('id', props.postId)
+
+     
+      setIsLoading(false);
+      //router.reload();
+      router.push("/");
+      
+       
+
+    } catch(error){
+      console.error(error)
+    } finally{
+      setIsLoading(false);
+      dispatch(filter("deine"));
+      // router.reload();
+      router.push("/");
+    }
   }
 
     return (

@@ -27,7 +27,7 @@ export default function Home() {
 
   const [myPosts, setMyPosts] = useState()
 
-  const {data, error} = useSWR('/api/get-post', fetcher /*, {refreshInterval: 200} */)
+  const {data, error} = useSWR('/api/get-post', fetcher, {refreshInterval: 200} )
 
 
   console.log(myPosts);

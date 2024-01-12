@@ -25,6 +25,7 @@
     top: 5px;
     height: 100%;
     padding: 0px 5px;
+    width: 40px;
 }
 
 .goBack_link:hover{
@@ -115,11 +116,26 @@
     
 }
 
+@media screen and (max-width: 1200px){
+    .output_field{
+        width: 80vw;
+    }
+
+    .webUser_container{
+        transition: 0.4s ease;
+        display: none;
+    }
+
+     .createPost_form{
+         width: 80vw;
+     }
+}
 
 @media screen and (max-width: 600px){
 
     .createPost_form{
         transition: 0.4s ease;
-        width: 500px;
+        width: 90vw;
     }
 }
+

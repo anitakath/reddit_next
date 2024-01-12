@@ -19,7 +19,9 @@ const Main = (props) => {
 
   console.log(currentFilter)
 
+  const isLoggedIn = useSelector((state) => state.auth)
 
+  console.log(isLoggedIn.isLoggedIn)
 
 
  

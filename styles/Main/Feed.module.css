@@ -66,14 +66,26 @@
     align-items: center;
 }
 
+.createPost_linkDiv{
+    width: 300px;
+    display: flex;
+}
+
 .createPost_link{
-    border-bottom: 2px solid black;
-    padding: 4px 10px;
-  
+    border-bottom: 2px solid rgba(255,255,255, 0.6);
+    padding:  10px;
+    background: #F7567C;
+    color: rgba(255,255,255, 0.8);
+    font-size: 1.3rem;
+    width: 300px;
+    display: flex;
+    justify-content: center;
 }
 
 .createPost_link:hover{
     transition: 0.4s ease;
+    background: rgba(255,255,255, 0.6);
+    color: #F7567C;
     border-bottom: 2px solid #F7567C;
 }
 

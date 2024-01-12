@@ -23,7 +23,7 @@ const Post = (props) => {
 
       <div className={styles.postField}>
         <div className={styles.postInfo}>
-          <p>created by: {author}</p> 
+          <p>created by: {author}</p>
           <p className={styles.postInfo_at}> at: {created_at}</p>
         </div>
         <div className={styles.postItself}>
@@ -31,7 +31,7 @@ const Post = (props) => {
           <p>{description}</p>
         </div>
         <div className={styles.postInteraction}>
-          <PostInteraction />
+          <PostInteraction postId={id} />
         </div>
       </div>
     </div>

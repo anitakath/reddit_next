@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faImage } from "@fortawesome/free-regular-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { faUpRightAndDownLeftFromCenter } from "@fortawesome/free-solid-svg-icons";
+//import { faUpRightAndDownLeftFromCenter } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 
@@ -39,7 +39,7 @@ const CreatePost = () => {
 
       <div className={styles.form_container}>
         <form className={styles.createPost_form}>
-          <div>
+          <div className={styles.createPost_linkDiv}>
             <Link href={`/new-post`} className={styles.createPost_link}>
                create a new post
             </Link>
@@ -50,12 +50,7 @@ const CreatePost = () => {
           <button className={styles.link_btn}>
             <FontAwesomeIcon icon={faLink} className={styles.icon} />
           </button>
-          <button className={styles.enlarge_btn}>
-            <FontAwesomeIcon
-              icon={faUpRightAndDownLeftFromCenter}
-              className={styles.icon}
-            />
-          </button>
+         
           <button className={styles.createPost_btn} type="submit">
             <FontAwesomeIcon icon={faPlus} className={styles.icon} />
           </button>
