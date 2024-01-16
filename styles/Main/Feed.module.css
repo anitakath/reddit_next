@@ -55,7 +55,7 @@
     width: 90%;
     margin: 3px;
     display: flex;
-    justify-content: centern;
+    justify-content: center;
     align-items: center;
 }
 
@@ -80,6 +80,7 @@
     width: 300px;
     display: flex;
     justify-content: center;
+    background: #F7567C;
 }
 
 .createPost_link:hover{

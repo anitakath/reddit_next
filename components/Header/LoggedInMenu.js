@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 //REDUX
 import { logout } from "@/store/authSlice";
 import { useDispatch } from "react-redux";
@@ -10,13 +12,18 @@ const LoggedInMenu = () => {
 
   return (
     <div className={styles.container}>
-      <p> Einstellungen </p>
+
+      <Link href="/profile"> Einstellungen </Link>
+
       <p> Profil </p>
-      <p> Nachtmodus </p>
+
+      <p> Nachtmodus </p> 
+
       <button className={styles.logout_btn} onClick={() => dispatch(logout())}>
-        {" "}
-        Abmelden
+        abmelden
       </button>
+
+
     </div>
   );
 };

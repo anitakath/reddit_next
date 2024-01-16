@@ -2,9 +2,11 @@
 
 .container{
     min-height: 100vh;
-    padding: 30px;
 }
 
+.createPost_Wrapper{
+    padding: 30px;
+}
 .title_container{
     display: flex;
     position: relative;

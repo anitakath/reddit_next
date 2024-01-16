@@ -6,10 +6,9 @@ import { useState } from "react";
 import Header from "@/components/Header/Header";
 import NewPostForm from "@/components/Main/NewPost/NewPostForm";
 import WebUser from "@/components/Main/WebUser";
+import Start from "@/components/Start";
 
-//REDUX
-import { Provider} from "react-redux";
-import store from '@/store';
+
 
 
 
@@ -17,44 +16,24 @@ import store from '@/store';
 import styles from '../styles/Main/CreatePost.module.css'
 
 
-//FONT AWESOME
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 
 
 const NewPost = () =>{
 
 
+
+
+
   
 
     return (
-      <Provider store={store}>
+      <div>
         <div className="App">
           <Header />
-          <div className={styles.container}>
-            <div className={styles.title_container}>
-              <h1 className={styles.createPost_title}>
-                ERSTELLE ENEN NEUEN POST
-              </h1>
-              <Link href={`/`} className={styles.goBack_link}>
-                <FontAwesomeIcon icon={faHouse}></FontAwesomeIcon>
-              </Link>
-            </div>
-
-            <div className={styles.createPost_div}>
-              <NewPostForm />
-             
-
-              <div className={styles.webUser_container}>
-                <div className={styles.webUser_fixed}>
-                  <WebUser />
-                </div>
-              </div>
-            </div>
-          </div>
+          
+          <NewPostForm />
         </div>
-      </Provider>
+      </div>
     );
 }
 

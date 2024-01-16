@@ -1,14 +1,18 @@
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+
 
 //COMPONENTS
 import Header from '@/components/Header/Header';
 import Main from '@/components/Main/Main';
 
-//REDUX
-import {Provider} from 'react-redux'
-import store from '@/store';
+//CONTEXT
+import { RedditContext } from "@/context/RedditContext";
 
+
+//REDUX
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "@/store/authSlice";
 
 //HOOKS
 import useSWR from 'swr'
@@ -21,6 +25,21 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 
 export default function Home() {
+
+  const {currentUser} = useContext(RedditContext)
+
+  console.log(currentUser)
+
+  const dispatch = useDispatch();
+
+  //const user = currentUser.user
+
+  if(currentUser){
+      console.log(currentUser.user);
+      dispatch(login())
+      
+
+  }
 
 
   
@@ -50,12 +69,12 @@ export default function Home() {
 
 
   return (
-    <Provider store={store}>
-      <div className="App">
-        <Header />
-        <Main posts={myPosts} />
-      </div>
-    </Provider>
+  
+    <div className="App">
+      <Header />
+      <Main posts={myPosts} />
+    </div>
+
   );
           
        

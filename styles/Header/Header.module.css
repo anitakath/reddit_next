@@ -1,11 +1,23 @@
 
 
 .container{
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height:10vh;
     position: relative;
+}
+
+.login_callToAction{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background: linear-gradient(#F7567C, rgba(93,87,107, 0.3));
+    color: rgba(255,255,255, 0.8);
 }
 
 .title{
@@ -22,10 +34,10 @@
 }
 
 .user{
-     color: #F7567C;
-     cursor: pointer;
-     width: 20px;
-     height: 20px;
+    color: #F7567C;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -76,21 +88,6 @@
 }
 
 
-.menu_btn{
-    cursor: pointer;
-    font-size: 1.4rem;
-    border-radius: 5px;
-    padding: 10px;
-      margin: 30px;
-    background: transparent;
-    border: none;
-}
-
-.menu_btn:hover, .search_btn:hover{
-    transition: 0.4s ease;
-    background: #F7567C;
-    color: white;
-}
 
 
 .menu_backdrop{
@@ -99,18 +96,21 @@
     height: 100vh;
     top: 0;
     right: 0;
-    background: rgba(255,255,255, 0.5);
+    background: rgba(255,255,255, 0.8);
+    z-index: 100;
 }
 .menu_container{
     position: fixed;
     transition: 0.8s ease;
     background: white;
     box-shadow: 1px 1px 5px grey;
-    height: 98vh;
+    height: 100vh;
+    overflow: scroll;
     width: 400px;
     top: 0;
     left:0px;
-    padding: 10px;
+    padding: 20px;
+    z-index: 1000;
 }
 
 .loggedIn_wrapper{
@@ -138,9 +138,4 @@
     height: 87vh;
 }
 
-.login, .register{
-    transition: 0.4s ease;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-}
+
