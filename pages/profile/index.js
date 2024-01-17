@@ -8,6 +8,8 @@ import Start from '@/components/Start';
 //STYLE
 import styles from '../../styles/Profile/Profile.module.css'
 
+//COMPONENTS
+import SettingsComponent from '@/components/Main/Settings/Settings';
 
 //REDUX
 import { useSelector } from 'react-redux';
@@ -27,7 +29,11 @@ const Profile = () =>{
             <Header />
             <div className={styles.profile_container}>
 
+
+
               <h1> Profil </h1>
+
+              <SettingsComponent />
               
             </div>
           </div>

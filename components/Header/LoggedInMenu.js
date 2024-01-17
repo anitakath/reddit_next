@@ -13,17 +13,15 @@ const LoggedInMenu = () => {
   return (
     <div className={styles.container}>
 
-      <Link href="/profile"> Einstellungen </Link>
-
       <p> Profil </p>
 
-      <p> Nachtmodus </p> 
+      <Link href="/profile/settings"> Profileinstellungen </Link>
+
+      <p> Nachtmodus </p>
 
       <button className={styles.logout_btn} onClick={() => dispatch(logout())}>
         abmelden
       </button>
-
-
     </div>
   );
 };

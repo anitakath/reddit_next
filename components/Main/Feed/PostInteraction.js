@@ -81,7 +81,7 @@ const postInteraction = (props) =>{
     return (
       <div className={styles.postInteraction_container}>
         <div className={styles.postInteraction_div}>
-          <button className={styles.like_btn}>
+          <button className={styles.save_btn}>
             <FontAwesomeIcon
               icon={faBookmark}
               className={styles.postInteraction_icon}
