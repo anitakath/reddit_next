@@ -12,13 +12,12 @@
 .createPost_container{
     margin: 20px;
     height: 70px;
+    display: flex;
    
 }
 
 
-.createPost_container{
-    display: flex;
-}
+
 
 .userImage_container{
     width: 10%;
@@ -29,6 +28,13 @@
     align-items: center;
 }
 
+.users_image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+/*
 .circle{
     height:  55px;
     width: 55px;
@@ -37,17 +43,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    border: 2px solid purple;
+} 
 
 .circle:hover{
     cursor: pointer;
     transition: 0.4s ease;
     background: #F7567C;
 }
-
 .icon{
     height: 60%;
 }
+*/
+
+
 
 
 
@@ -55,20 +64,24 @@
     width: 90%;
     margin: 3px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
+/*
 .createPost_form{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border: 2px solid yellow;
 }
+*/
 
 .createPost_linkDiv{
-    width: 300px;
+    width: 350px;
     display: flex;
+    justify-content: center;
+    
 }
 
 .createPost_link{
@@ -78,8 +91,10 @@
     color: rgba(255,255,255, 0.8);
     font-size: 1.3rem;
     width: 300px;
+    height: 50px;
     display: flex;
     justify-content: center;
+    align-items: center;
     background: #F7567C;
 }
 
@@ -90,23 +105,11 @@
     border-bottom: 2px solid #F7567C;
 }
 
-.textarea_input{
-    width: 60%;
-    border-radius: 3px;
-    background-color: rgba(255,255,255, 0.3);
-    border: none;
-    height: 40px;
-    cursor: pointer;
-    padding: 4px;
-    border-bottom: 2px solid white;
-}
 
-.textarea_input:hover{
-    transition: 0.4s ease;
-}
-
-.textarea_input:focus{
-    outline: none;
+.media_buttons{
+    width: 80px;
+    display: flex;
+    justify-content: center;
 }
 
 .photo_btn, .link_btn, .enlarge_btn{
@@ -223,7 +226,6 @@
 }
 
 .postItself{
-   
     padding: 10px;
     margin: 0;
     font-size: 1rem;
@@ -270,9 +272,10 @@
 .postInteraction_container{
     display: flex;
     padding: 3px;
+    /*border: 2px solid blue;*/
 }
 
-.postInteraction_div{
+.postInteraction_div, .reportInteraction_div,  .deleteInteraction_div{
     margin: 0px 10px;
     padding: 3px;
     width: 100px;
@@ -280,21 +283,100 @@
 
 }
 
-.like_btn, .share_btn, .comment_btn{
+.save_btn, .share_btn, .comment_btn, .report_btn, .delete_btn{
     width: 100%;
     display: flex;
     cursor: pointer;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    
+    /*border: 2px solid red;*/
+   
 }
 
-.like_btn:hover, .share_btn:hover, .comment_btn:hover{
+.save_btn:hover, .share_btn:hover, .comment_btn:hover, .report_btn:hover, .delete_btn:hover{
     transition: 0.4s ease;
     color: red;
 }
 
 .postInteraction_icon{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin-right: 5px;
+    /*border: 2px solid yellow; */
+}
+
+.comment_btn{
+    position: relative;
+}
+
+.comments_amount{
+    position: absolute;
+    left: 35px;
+    bottom: 36px;
+    font-size: 0.6rem;
+    color: white;
+}
+
+
+@media screen and (max-width: 1300px){
+
+
+
+    .postInteraction_div, .reportInteraction_div,  .deleteInteraction_div{
+        transition: 0.4s ease;
+        width: 80px;
+    }
+    .save_btn, .share_btn, .comment_btn, .report_btn, .delete_btn{
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .comments_amount{
+        transition: 0.4s ease;
+        top: 9px;
+        left: 23px;
+        
+        
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+    .postInteraction_container{
+       /* border: 2px solid purple;*/
+    }
+
+    .postInteraction_div{
+        transition: 0.4s ease;
+        width: 90px;
+        /*border: 2px solid green;*/
+        
+     
+    }
+
+    .save_btn, .share_btn, .comment_btn, .report_btn, .delete_btn{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .postInteraction_icon{
+        transition: 0.4s ease;
+       
+    }
+
+    .comments_amount{
+        transition: 0.4s ease;
+        top: 8px;
+        left: 31px;
+    }
+
+    .reportInteraction_div{
+        display: none;
+    }
+    .report_btn {
+       display: none;
+    }
 }

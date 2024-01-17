@@ -5,9 +5,11 @@ import { useState } from "react";
 
 //FONT AWESOME
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShare, faTrash} from "@fortawesome/free-solid-svg-icons";
+import { faBook, faShare, faTrash} from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
+import { faFlag } from "@fortawesome/free-regular-svg-icons";
+import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
 
 //SUPABASE
@@ -61,15 +63,30 @@ const postInteraction = (props) =>{
     }
   }
 
+
+  let comments = 4000;
+
+  let func = num => Number(num)
+
+  let commentsArr = Array.from(String(comments), func)
+
+
+  if(comments >= 1000){
+    //comments = '>1k'
+    comments = '>' + commentsArr[0] + 'k'
+  }
+
+  
+
     return (
       <div className={styles.postInteraction_container}>
         <div className={styles.postInteraction_div}>
           <button className={styles.like_btn}>
             <FontAwesomeIcon
-              icon={faHeart}
+              icon={faBookmark}
               className={styles.postInteraction_icon}
             />
-            <p> like </p>
+            <p> speichern </p>
           </button>
         </div>
 
@@ -79,7 +96,7 @@ const postInteraction = (props) =>{
               icon={faShare}
               className={styles.postInteraction_icon}
             />
-            <p> share </p>
+            <p> teilen </p>
           </button>
         </div>
 
@@ -89,18 +106,28 @@ const postInteraction = (props) =>{
               icon={faComment}
               className={styles.postInteraction_icon}
             />
-            <p> comment </p>
+            <p className={styles.comments_amount}> {comments} </p>
+            <p> kommentieren </p>
+          </button>
+        </div>
+        <div className={styles.reportInteraction_div}>
+          <button className={styles.report_btn}>
+            <FontAwesomeIcon
+              icon={faFlag}
+              className={styles.postInteraction_icon}
+            />
+            <p> melden </p>
           </button>
         </div>
 
-        <div className={styles.postInteraction_div}>
-          <button className={styles.comment_btn}>
+        <div className={styles.deleteInteraction_div}>
+          <button className={styles.delete_btn}>
             <FontAwesomeIcon
               icon={faTrash}
               className={styles.postInteraction_icon}
               onClick={deletePostHandler}
             />
-            <p> delete </p>
+            <p> löschen </p>
           </button>
         </div>
       </div>
